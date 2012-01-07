@@ -322,6 +322,18 @@ a:hover {
 }
 
 /* it's in 3D */
+.opaque {
+    background-color: white;
+    opacity: 0.6;
+    padding-left: 10px;
+    padding-top: 10px;
+    -webkit-border-radius:  6px;
+    -moz-border-radius:     6px;
+    -ms-border-radius:      6px;
+    -o-border-radius:       6px;
+    -border-radius:         6px;
+    
+}
 #its-in-3d {
     font-size: 20px;
 }
@@ -333,14 +345,14 @@ a:hover {
 }
 
 #its-in-3d .have {
-    height: 700px;
+    height: 600px;
     width: 240px;
     position: absolute;
-    -webkit-transform: translateX(-250px) translateY(-20px);
-    -moz-transform:    translateX(-250px) translateY(-20px);
-    -ms-transform:     translateX(-250px) translateY(-20px);
-    -o-transform:      translateX(-250px) translateY(-20px);
-    transform:         translateX(-250px) translateY(-20px);
+    -webkit-transform: translateX(-270px) translateY(-20px);
+    -moz-transform:    translateX(-270px) translateY(-20px);
+    -ms-transform:     translateX(-270px) translateY(-20px);
+    -o-transform:      translateX(-270px) translateY(-20px);
+    transform:         translateX(-270px) translateY(-20px);
 }
 
 #its-in-3d .you {
@@ -352,7 +364,7 @@ a:hover {
 }
 
 #its-in-3d .noticed {
-    height: 700px;
+    height: 600px;
     width: 240px;
     position: absolute;
     -webkit-transform: translateX(850px) translateY(-580px);
