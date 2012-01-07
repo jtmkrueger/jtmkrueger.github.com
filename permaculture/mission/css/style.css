@@ -198,8 +198,8 @@ a:hover {
     transform:         translateZ(20px);
 }
 
-#title h1 {
-    font-size: 190px;
+#title h2 {
+    font-size: 100px;
     
     -webkit-transform: translateZ(50px);
     -moz-transform:    translateZ(50px);
@@ -217,6 +217,8 @@ a:hover {
 #big {
     width: 600px;
     text-align: center;
+    position: relative;
+    top: 300px;
     font-size: 60px;
     line-height: 1;
 }
@@ -334,11 +336,11 @@ a:hover {
     height: 700px;
     width: 240px;
     position: absolute;
-    -webkit-transform: translateX(-250px) translateY(-90px);
-    -moz-transform:    translateX(-250px) translateY(-90px);
-    -ms-transform:     translateX(-250px) translateY(-90px);
-    -o-transform:      translateX(-250px) translateY(-90px);
-    transform:         translateX(-250px) translateY(-90px);
+    -webkit-transform: translateX(-250px) translateY(-20px);
+    -moz-transform:    translateX(-250px) translateY(-20px);
+    -ms-transform:     translateX(-250px) translateY(-20px);
+    -o-transform:      translateX(-250px) translateY(-20px);
+    transform:         translateX(-250px) translateY(-20px);
 }
 
 #its-in-3d .you {
@@ -353,11 +355,11 @@ a:hover {
     height: 700px;
     width: 240px;
     position: absolute;
-    -webkit-transform: translateX(850px) translateY(-450px);
-    -moz-transform:    translateX(850px) translateY(-450px);
-    -ms-transform:     translateX(850px) translateY(-450px);
-    -o-transform:      translateX(850px) translateY(-450px);
-    transform:         translateX(850px) translateY(-450px);
+    -webkit-transform: translateX(850px) translateY(-580px);
+    -moz-transform:    translateX(850px) translateY(-580px);
+    -ms-transform:     translateX(850px) translateY(-580px);
+    -o-transform:      translateX(850px) translateY(-580px);
+    transform:         translateX(850px) translateY(-580px);
 }
 
 /* overview step */
