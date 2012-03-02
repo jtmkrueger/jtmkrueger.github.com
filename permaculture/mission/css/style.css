@@ -100,6 +100,7 @@ a:hover {
 /* COMMON STEP STYLES */
 
 .step {
+    background: rgba(255,255,255,.5);
     width: 900px;
     padding: 40px;
 
@@ -198,8 +199,8 @@ a:hover {
     transform:         translateZ(20px);
 }
 
-#title h2 {
-    font-size: 100px;
+#title h1 {
+    font-size: 190px;
     
     -webkit-transform: translateZ(50px);
     -moz-transform:    translateZ(50px);
@@ -217,8 +218,6 @@ a:hover {
 #big {
     width: 600px;
     text-align: center;
-    position: relative;
-    top: 300px;
     font-size: 60px;
     line-height: 1;
 }
@@ -322,18 +321,6 @@ a:hover {
 }
 
 /* it's in 3D */
-.opaque {
-    background-color: white;
-    opacity: 0.6;
-    padding-left: 10px;
-    padding-top: 10px;
-    -webkit-border-radius:  6px;
-    -moz-border-radius:     6px;
-    -ms-border-radius:      6px;
-    -o-border-radius:       6px;
-    -border-radius:         6px;
-    
-}
 #its-in-3d {
     font-size: 20px;
 }
@@ -345,14 +332,14 @@ a:hover {
 }
 
 #its-in-3d .have {
-    height: 600px;
+    height: 700px;
     width: 240px;
     position: absolute;
-    -webkit-transform: translateX(-270px) translateY(-20px);
-    -moz-transform:    translateX(-270px) translateY(-20px);
-    -ms-transform:     translateX(-270px) translateY(-20px);
-    -o-transform:      translateX(-270px) translateY(-20px);
-    transform:         translateX(-270px) translateY(-20px);
+    -webkit-transform: translateX(-250px) translateY(-90px);
+    -moz-transform:    translateX(-250px) translateY(-90px);
+    -ms-transform:     translateX(-250px) translateY(-90px);
+    -o-transform:      translateX(-250px) translateY(-90px);
+    transform:         translateX(-250px) translateY(-90px);
 }
 
 #its-in-3d .you {
@@ -364,16 +351,35 @@ a:hover {
 }
 
 #its-in-3d .noticed {
-    height: 600px;
+    height: 700px;
     width: 240px;
     position: absolute;
-    -webkit-transform: translateX(850px) translateY(-580px);
-    -moz-transform:    translateX(850px) translateY(-580px);
-    -ms-transform:     translateX(850px) translateY(-580px);
-    -o-transform:      translateX(850px) translateY(-580px);
-    transform:         translateX(850px) translateY(-580px);
+    -webkit-transform: translateX(850px) translateY(-450px);
+    -moz-transform:    translateX(850px) translateY(-450px);
+    -ms-transform:     translateX(850px) translateY(-450px);
+    -o-transform:      translateX(850px) translateY(-450px);
+    transform:         translateX(850px) translateY(-450px);
 }
 
+#park-design {
+  height: 700px;
+  width: 240px;
+  position: absolute;
+
+}
+
+.text {
+  width: 700px;
+}
+.paragraph {
+  width: 1300px;
+  height: 700px;
+  font-size: 18px;
+}
+.line {
+  width: 500px;
+  height: 300px;
+}
 /* overview step */
 
 #overview {
