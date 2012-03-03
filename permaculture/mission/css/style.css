@@ -354,11 +354,11 @@ a:hover {
     height: 700px;
     width: 240px;
     position: absolute;
-    -webkit-transform: translateX(850px) translateY(-450px);
-    -moz-transform:    translateX(850px) translateY(-450px);
-    -ms-transform:     translateX(850px) translateY(-450px);
-    -o-transform:      translateX(850px) translateY(-450px);
-    transform:         translateX(850px) translateY(-450px);
+    -webkit-transform: translateX(870px) translateY(-450px);
+    -moz-transform:    translateX(870px) translateY(-450px);
+    -ms-transform:     translateX(870px) translateY(-450px);
+    -o-transform:      translateX(870px) translateY(-450px);
+    transform:         translateX(870px) translateY(-450px);
 }
 
 #park-design {
@@ -379,6 +379,15 @@ a:hover {
 .line {
   width: 500px;
   height: 300px;
+}
+.time {
+  height: 500px;
+  width: 500px;
+  background-color: white;
+  text-align: center;
+}
+.time:not(.active) {
+    opacity: 0;
 }
 /* overview step */
 
