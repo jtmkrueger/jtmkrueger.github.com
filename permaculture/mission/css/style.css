@@ -389,6 +389,10 @@ a:hover {
 .time:not(.active) {
     opacity: 0;
 }
+code {
+  font-family: monaco;
+  font-size: 24px;
+}
 /* overview step */
 
 #overview {
