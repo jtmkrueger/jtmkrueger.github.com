@@ -31,6 +31,9 @@ navigator.geolocation.getCurrentPosition (position) ->
               shadow: true
               showAxies: true
 
+            credits:
+              enabled: false
+
             title:
               text: 'Total Direct Normal Solar Resource Values<br> Monthly Average'
 
