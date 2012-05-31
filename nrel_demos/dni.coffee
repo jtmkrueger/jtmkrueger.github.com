@@ -35,7 +35,7 @@ navigator.geolocation.getCurrentPosition (position) ->
               enabled: false
 
             title:
-              text: 'Total Direct Normal Solar Resource Values<br> Monthly Average'
+              text: 'Direct Normal Solar Resource Values<br> Monthly Average'
 
             xAxis:
               categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
