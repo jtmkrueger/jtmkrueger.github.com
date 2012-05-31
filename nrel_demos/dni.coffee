@@ -6,7 +6,7 @@ navigator.geolocation.getCurrentPosition (position) ->
   $.ajax
     url: 'http://api.geonames.org/findNearbyPlaceNameJSON?'
     data:
-      username: 'demo'
+      username: 'jtmkrueger'
       lat: pos.coords.latitude
       lng: pos.coords.longitude
     success: (nameData) ->

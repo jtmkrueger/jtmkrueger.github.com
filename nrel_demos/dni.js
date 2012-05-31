@@ -9,7 +9,7 @@
     return $.ajax({
       url: 'http://api.geonames.org/findNearbyPlaceNameJSON?',
       data: {
-        username: 'demo',
+        username: 'jtmkrueger',
         lat: pos.coords.latitude,
         lng: pos.coords.longitude
       },
