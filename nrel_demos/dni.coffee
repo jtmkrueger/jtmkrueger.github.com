@@ -6,7 +6,10 @@ $.ajax
     chart = new Highcharts.Chart
       chart:
         renderTo: 'container'
-        type: 'bar'
+        type: 'column'
+        height: 800
+        shadow: true
+        showAxies: true
 
       title:
         text: 'Total Direct Normal Solar Resource Values (watt-hours/m2/day) Monthly Average'
