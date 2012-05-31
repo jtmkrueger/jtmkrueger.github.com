@@ -32,7 +32,7 @@ navigator.geolocation.getCurrentPosition (position) ->
               showAxies: true
 
             title:
-              text: 'Total Direct Normal Solar Resource Values (watt-hours/m2/day) Monthly Average'
+              text: 'Total Direct Normal Solar Resource Values<br> Monthly Average'
 
             xAxis:
               categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
