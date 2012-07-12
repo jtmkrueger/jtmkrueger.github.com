@@ -1,0 +1,14 @@
+body {
+  width:90%;
+  font-size: 1em;
+}
+@media all and (orientation: portrait) {
+p {
+  background-color: red;
+}
+}
+@media all and (orientation: landscape) {
+  p {
+    background-color: green;
+  }
+}
