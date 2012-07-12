@@ -6,6 +6,9 @@
   
     <title>Form</title>
     <style type="text/css" media="screen">
+      input,textarea {
+        font-size:1em;
+      }
       @media screen and (orientation: portrait) {
         label {
           display: block;
@@ -24,9 +27,10 @@
   </head>
 <body>
   <h1>New Contact</h1>
+  <a href="tel:9702370535">Call Me!</a>
   <form action="" method="get" accept-charset="utf-8">
     <label class='label' for='name'>name</label> 
-    <input autocorrect='off' autocomplete='off' autocapitalize='off' type="text" name="name" id="name" /><br />
+    <input autocorrect='off' autocomplete='off' autocapitalize='off' placeholder='your name' type="text" name="name" id="name" /><br />
 
     <label class='label' for='email'>email</label> 
     <input type="email" name="email" id="email" required /><br />
