@@ -18,6 +18,19 @@
         top: 100px;
       }
     </style>
+    <script type="text/javascript" charset="utf-8">
+      function init() {
+        document.getElementById('square').addEventListener('touchmove', function (e) {
+          e.preventDefault();
+
+          var square = document.getElementById('square')
+          square.style.left = e.targetTouches[0].screenX + "px"
+          square.style.top = e.targetTouches[0].screenY + "px"
+        }, false);
+      }
+
+      window.onload = init;
+    </script>
   </head>
 <body>
   <h1>Touch</h1>
