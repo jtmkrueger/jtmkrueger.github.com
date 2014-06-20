@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html class='no-js'>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  
+    <title>Form</title>
+    <style type="text/css" media="screen">
+      input,textarea {
+        font-size:1em;
+      }
+      @media screen and (orientation: portrait) {
+        label {
+          display: block;
+        }
+      }
+      @media screen and (orientation: landscape) {
+        label:after {
+          content: ':';
+        }
+      }
+      input:focus:required:invalid {
+        background: pink;
+      }
+    </style>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js'></script>
+  </head>
+<body>
+  <h1>New Contact</h1>
+  <a href="tel:9702370535">Call Me!</a>
+  <a href="facetime:9702370535">Facetime Me!</a>
+  <form action="" method="get" accept-charset="utf-8">
+    <label class='label' for='name'>name</label> 
+    <input autocorrect='off' autocomplete='off' autocapitalize='off' placeholder='your name' type="text" name="name" id="name" /><br />
+
+    <label class='label' for='email'>email</label> 
+    <input type="email" name="email" id="email" required /><br />
+
+    <label class='label' for='addr'>address</label> 
+    <input type="text" name="addr" id="addr" /><br />
+    
+    <label for="search">search</label>
+    <input type="search"  name="search" id="ss" /><br />
+
+    <label for="shoeSize">Shoe size</label>
+    <input type="range" max='10' min='5' name="shoeSize" id="ss" /><br />
+
+
+    <label for="date">date</label>
+    <input type="date" name="date" id="date" /><br />
+
+    <input type="submit" value="Continue &rarr;" />
+    
+  </form>
+</body>
+</html>

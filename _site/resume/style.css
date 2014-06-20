@@ -1,0 +1,167 @@
+/* =Reset default browser CSS. 
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+body {
+	line-height: 1;
+	border: 0px;
+	margin: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: normal;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img {
+	border: none;
+}
+a:focus { 
+	outline: none; 
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+/* =Overall Layout
+-------------------------------------------------------------- */
+body {
+	font-family: sans-serif;
+}
+#wrapper {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+aside {
+	background: #606060;
+	color: white;
+	min-width: 300px;
+	height: 100%;
+	display: table-cell;
+	padding: 20px 60px;
+	-webkit-box-shadow: -10px 0px 10px 1px rgba(0,0,0,0.5) inset;
+	-moz-box-shadow: -10px 0px 10px 1px rgba(0,0,0,0.5) inset;
+	-o-box-shadow: -10px 0px 10px 1px rgba(0,0,0,0.5) inset;
+	-ms-box-shadow: -10px 0px 10px 1px rgba(0,0,0,0.5) inset;
+	box-shadow: -10px 0px 10px 1px rgba(0,0,0,0.5) inset;
+}
+aside a {
+  text-decoration: none;
+  color: #78B9E8;
+  -moz-transition: color  1s;
+  -webkit-transition: color 1s;
+  -o-transition: color  1s;
+  -ms-transition: color 1s;
+  transition: color 1s;
+}
+aside a:hover {
+  color: #00D900;
+}
+.main {
+	min-width: 600px;
+	height: 100%;
+	background: white;
+	display: table-cell;
+  vertical-align: top;
+	padding: 20px 60px;
+}
+
+/* =Main
+-------------------------------------------------------------- */
+.main h1 {
+	font-weight: 100;
+	font-size: 60px;
+	margin-bottom: 5px;
+	
+}
+.main h2 {
+	margin-top: 5px;
+}
+.main h3 {
+	font-weight: 600;
+	padding-top: 40px;
+}
+.main h4 {
+	font-weight: 600;
+	padding: 0px;
+	margin: 0px;
+}
+.main ul {
+	line-height: 20px;
+}
+.main ul ul {
+	list-style-type: circle;
+}
+.main ul ul ul {
+	list-style-type: none;
+	position: relative;
+	left: -30px;
+	margin-left: 10px; 
+	text-indent: -10px;
+}
+.date {
+	font-size: smaller;
+}
+#languages {
+	font-weight: bold;
+}
+#languages ul {
+	font-weight: 400;
+	list-style-type: disc;
+}
+
+/* =Aside
+-------------------------------------------------------------- */
+#res_image {
+	width: 250px;
+	margin: 60 auto;
+	border-top: 10px solid white;
+	border-left: 10px solid white;
+	border-right: 10px solid white;
+	border-bottom: 50px solid white;
+	-webkit-box-shadow: -10px 10px 10px 1px rgba(0,0,0,0.5);
+	-moz-box-shadow: -10px 10px 10px 1px rgba(0,0,0,0.5);
+	-o-box-shadow: -10px 10px 10px 1px rgba(0,0,0,0.5);
+	-ms-box-shadow: -10px 10px 10px 1px rgba(0,0,0,0.5);
+	box-shadow: -10px 10px 10px 1px rgba(0,0,0,0.5);
+}
+aside ul {
+	margin-left: -40px;
+}
