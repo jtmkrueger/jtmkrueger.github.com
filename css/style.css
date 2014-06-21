@@ -35,7 +35,7 @@ body {
   font-family: libre_baskervilleregular, serif;
   font-size: 16px;
 }
-h1, h2 {
+h1, .catalog {
   text-align: center;
 }
 h1 {
