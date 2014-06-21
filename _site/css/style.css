@@ -58,7 +58,7 @@ p {
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
   p {
-    width: 92%;
+    width: 96%;
     margin: 0.5em auto;
     text-indent: 2em;
     line-height: 22px;
