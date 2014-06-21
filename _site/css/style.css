@@ -35,7 +35,7 @@ body {
   font-family: libre_baskervilleregular, serif;
   font-size: 16px;
 }
-h1, .catalog {
+h1, h2, .catalog {
   text-align: center;
 }
 h1 {
@@ -46,4 +46,10 @@ h1 {
 }
 #header #menu a:visited {
   color: black;
+}
+p {
+  width: 80%;
+  margin: 0.5em auto;
+  text-indent: 5em;
+  line-height: 22px;
 }
