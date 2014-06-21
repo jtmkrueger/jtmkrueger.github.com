@@ -1,6 +1,6 @@
 # writings
 
-The hunter
+## The hunter
 * timeperiod: 1700s? 1800s?
 * Main character is an eagle
 * meets a human, saves him from being killed by another human
