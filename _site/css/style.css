@@ -98,8 +98,8 @@ h1, h2 {
   text-align: center;
 }
 #menu {
-  position: fixed;
-  top: 1px;
+  position: absolute;
+  bottom: 3px;
   right: 1px;
   cursor: pointer;
   font-size: smaller;
