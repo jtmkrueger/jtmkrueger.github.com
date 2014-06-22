@@ -99,7 +99,7 @@ h1, h2 {
 }
 #menu {
   position: absolute;
-  bottom: 3px;
+  bottom: 5px;
   right: 1px;
   cursor: pointer;
   font-size: smaller;
