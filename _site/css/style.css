@@ -99,9 +99,10 @@ h1, h2 {
 }
 #menu {
   position: fixed;
-  top: 6px;
-  right: 0px;
+  top: 1px;
+  right: 1px;
   cursor: pointer;
+  font-size: smaller;
 }
 #menu .menu-bar {
   width: 0.8em;
@@ -114,11 +115,19 @@ h1, h2 {
   height: 50px;
   width: 20px;
 }
-#header #menu a {
+#menu a {
   color: black;
 }
-#header #menu a:visited {
+#menu a:visited {
   color: black;
+}
+#header {
+  position: fixed;
+  width: 100%;
+  background-color: antiquewhite;
+}
+#main {
+  padding-top: 90px;
 }
 p {
   width: 80%;
