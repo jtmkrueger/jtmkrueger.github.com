@@ -129,6 +129,12 @@ h1, h2 {
 #main {
   padding-top: 110px;
 }
+#main ul {
+  text-align: center;
+}
+#main ul a {
+  color: black;
+}
 p {
   width: 80%;
   margin: 0.5em auto;
