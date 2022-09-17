@@ -13,8 +13,8 @@
       z-index: 999;
       background-size: cover;
       background-color: red;
-      width: 3px;
-      height: 3px;
+      width: 4px;
+      height: 4px;
       border: 1px solid black;
       border-radius: 50%;
       cursor: pointer;
@@ -27,9 +27,7 @@
 </head>
 <body>
   <div id="map"></div>
-
   <script>
-
     var pass_entered;
     var password="Mozz";
     // var voters_url = 'http://localhost:3000/voters/city_geojson/newport.json'; // local
@@ -109,8 +107,8 @@
               ['zoom'],
               0,
               2,
-              9,
-              8
+              5,
+              10
             ],
             // Transition from heatmap to circle layer by zoom level
             'heatmap-opacity': [
@@ -127,50 +125,67 @@
         'waterway'
       );
 
-      map.addLayer(
-        {
-          'id': 'voters-point',
-          'type': 'circle',
-          'source': 'voters',
-          'paint': {
-            'circle-radius': 2,
-            'circle-color': 'rgb(178,24,43)',
-            'circle-stroke-color': 'white',
-            'circle-stroke-width': 1,
-            // Transition from heatmap to circle layer by zoom level
-            'circle-opacity': [
-              'interpolate',
-              ['linear'],
-              ['zoom'],
-              7,
-              0,
-              8,
-              1
-            ]
-          }
-        }
-      );
+      // map.addLayer(
+      //   {
+      //     'id': 'voters-point',
+      //     'type': 'circle',
+      //     'source': 'voters',
+      //     'paint': {
+      //       'circle-radius': 2,
+      //       'circle-color': 'rgb(178,24,43)',
+      //       'circle-stroke-color': 'white',
+      //       'circle-stroke-width': 1,
+      //       // Transition from heatmap to circle layer by zoom level
+      //       'circle-opacity': [
+      //         'interpolate',
+      //         ['linear'],
+      //         ['zoom'],
+      //         7,
+      //         0,
+      //         8,
+      //         1
+      //       ]
+      //     }
+      //   }
+      // );
     });
 
-    // fetch(voters_url).then(response => response.json()).then(places => {
-    //   console.log(places);
-    //   places.features.forEach(place => {
-    //     // create the popup
-    //     var popup = new maplibregl.Popup({ offset: 5 }).setText(
-    //       place.properties.address
-    //     );
-    //      
-    //     // create DOM element for the marker
-    //     var el = document.createElement('div');
-    //     el.className = 'address-marker';
-    //      
-    //     // create the marker
-    //     new maplibregl.Marker(el)
-    //     .setLngLat(place.geometry.coordinates)
-    //     .setPopup(popup) // sets a popup on this marker
-    //     .addTo(map);
-    //   });
-    // });
+    fetch(voters_url).then(response => response.json()).then(places => {
+      var currentMarkers = [];
+
+      map.on('move', () => {
+        for (var i = currentMarkers.length - 1; i >= 0; i--) {
+          currentMarkers[i].remove();
+          currentMarkers.pop();
+        }
+
+        if (map.getZoom() >= 15) {
+          console.log('places', places);
+          console.log('bounds', map.getBounds());
+
+          places.features.forEach(place => {
+            if (map.getBounds().contains(place.geometry.coordinates)) {
+              // create the popup
+              var popup = new maplibregl.Popup({ offset: 5 }).setText(
+                place.properties.address
+              );
+               
+              // create DOM element for the marker
+              var el = document.createElement('div');
+              el.className = 'address-marker';
+               
+              // create the marker
+              var marker = new maplibregl.Marker(el)
+                .setLngLat(place.geometry.coordinates)
+                .setPopup(popup) // sets a popup on this marker
+                .addTo(map);
+              currentMarkers.push(marker);
+            }
+          });
+          console.log('markers.length', currentMarkers.length);
+        }
+      })
+    });
   </script>
 
 </body>
