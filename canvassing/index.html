@@ -13,8 +13,8 @@
       z-index: 999;
       background-size: cover;
       background-color: red;
-      width: 4px;
-      height: 4px;
+      width: 6px;
+      height: 6px;
       border: 1px solid black;
       border-radius: 50%;
       cursor: pointer;
@@ -166,7 +166,7 @@
             if (map.getBounds().contains(place.geometry.coordinates) && markerCount < 400) {
               // create the popup
               var popup = new maplibregl.Popup({ offset: 5 }).setText(
-                place.properties.address
+                place.properties.name + '&nbsp;' + place.properties.address
               );
                
               // create DOM element for the marker
