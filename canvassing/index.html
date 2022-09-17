@@ -30,8 +30,8 @@
   <script>
     var pass_entered;
     var password="Mozz";
-    // var voters_url = 'http://localhost:3000/voters/city_geojson/newport.json'; // local
-    var voters_url = 'newport.json'; // prod
+    var voters_url = 'http://localhost:3000/voters/city_geojson/newport.json'; // local
+    // var voters_url = 'newport.json'; // prod
 
     while (pass_entered!=password) {
         pass_entered=prompt('Please enter the password:','');
@@ -160,11 +160,10 @@
         }
 
         if (map.getZoom() >= 16) {
-          console.log('places', places);
-          console.log('bounds', map.getBounds());
+          var markerCount = 0;
 
           places.features.forEach(place => {
-            if (map.getBounds().contains(place.geometry.coordinates)) {
+            if (map.getBounds().contains(place.geometry.coordinates) && markerCount < 400) {
               // create the popup
               var popup = new maplibregl.Popup({ offset: 5 }).setText(
                 place.properties.address
@@ -180,6 +179,7 @@
                 .setPopup(popup) // sets a popup on this marker
                 .addTo(map);
               currentMarkers.push(marker);
+              markerCount++;
             }
           });
           console.log('markers.length', currentMarkers.length);
