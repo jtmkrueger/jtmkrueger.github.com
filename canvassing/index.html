@@ -31,7 +31,7 @@
   <script>
 
     var pass_entered;
-    var password="mozz";
+    var password="Mozz";
     // var voters_url = 'http://localhost:3000/voters/city_geojson/newport.json'; // local
     var voters_url = 'newport.json'; // prod
 
@@ -127,50 +127,50 @@
         'waterway'
       );
 
-      // map.addLayer(
-      //   {
-      //     'id': 'voters-point',
-      //     'type': 'circle',
-      //     'source': 'voters',
-      //     'paint': {
-      //       'circle-radius': 2,
-      //       'circle-color': 'rgb(178,24,43)',
-      //       'circle-stroke-color': 'white',
-      //       'circle-stroke-width': 1,
-      //       // Transition from heatmap to circle layer by zoom level
-      //       'circle-opacity': [
-      //         'interpolate',
-      //         ['linear'],
-      //         ['zoom'],
-      //         7,
-      //         0,
-      //         8,
-      //         1
-      //       ]
-      //     }
-      //   }
-      // );
+      map.addLayer(
+        {
+          'id': 'voters-point',
+          'type': 'circle',
+          'source': 'voters',
+          'paint': {
+            'circle-radius': 2,
+            'circle-color': 'rgb(178,24,43)',
+            'circle-stroke-color': 'white',
+            'circle-stroke-width': 1,
+            // Transition from heatmap to circle layer by zoom level
+            'circle-opacity': [
+              'interpolate',
+              ['linear'],
+              ['zoom'],
+              7,
+              0,
+              8,
+              1
+            ]
+          }
+        }
+      );
     });
 
-    fetch(voters_url).then(response => response.json()).then(places => {
-      console.log(places);
-      places.features.forEach(place => {
-        // create the popup
-        var popup = new maplibregl.Popup({ offset: 5 }).setText(
-          place.properties.address
-        );
-         
-        // create DOM element for the marker
-        var el = document.createElement('div');
-        el.className = 'address-marker';
-         
-        // create the marker
-        new maplibregl.Marker(el)
-        .setLngLat(place.geometry.coordinates)
-        .setPopup(popup) // sets a popup on this marker
-        .addTo(map);
-      });
-    });
+    // fetch(voters_url).then(response => response.json()).then(places => {
+    //   console.log(places);
+    //   places.features.forEach(place => {
+    //     // create the popup
+    //     var popup = new maplibregl.Popup({ offset: 5 }).setText(
+    //       place.properties.address
+    //     );
+    //      
+    //     // create DOM element for the marker
+    //     var el = document.createElement('div');
+    //     el.className = 'address-marker';
+    //      
+    //     // create the marker
+    //     new maplibregl.Marker(el)
+    //     .setLngLat(place.geometry.coordinates)
+    //     .setPopup(popup) // sets a popup on this marker
+    //     .addTo(map);
+    //   });
+    // });
   </script>
 
 </body>
