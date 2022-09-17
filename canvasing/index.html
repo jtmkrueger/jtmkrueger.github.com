@@ -15,6 +15,14 @@ body { margin: 0; padding: 0; }
   <div id="map"></div>
 
   <script>
+
+    var pass_entered;
+    var password="mozz";
+
+    while (pass_entered!=password) {
+        pass_entered=prompt('Please enter the password:','');
+    }
+
     var map = new maplibregl.Map({
       container: 'map',
       style:
@@ -38,8 +46,8 @@ body { margin: 0; padding: 0; }
       map.addSource('voters', {
         'type': 'geojson',
         'data':
-            'newport.json'
-        // 'http://localhost:3000/voters/city_geojson/newport.json' // local
+        'newport.json'
+        //'http://localhost:3000/voters/city_geojson/newport.json' // local
       });
 
       map.addLayer(
