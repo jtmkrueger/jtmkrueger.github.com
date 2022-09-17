@@ -165,14 +165,14 @@
           places.features.forEach(place => {
             if (map.getBounds().contains(place.geometry.coordinates) && markerCount < 400) {
               // create the popup
-              var popup = new maplibregl.Popup({ offset: 5 }).setText(
-                    `${place.properties.name} <br /> ${place.properties.address}`
+              var popup = new maplibregl.Popup({ offset: 5 }).setHTML(
+                `${place.properties.name} <br /> ${place.properties.address}`
               );
-               
+
               // create DOM element for the marker
               var el = document.createElement('div');
               el.className = 'address-marker';
-               
+
               // create the marker
               var marker = new maplibregl.Marker(el)
                 .setLngLat(place.geometry.coordinates)
@@ -182,7 +182,6 @@
               markerCount++;
             }
           });
-          console.log('markers.length', currentMarkers.length);
         }
       })
     });
