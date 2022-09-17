@@ -149,25 +149,25 @@
       );
     });
 
-    fetch(voters_url).then(response => response.json()).then(places => {
-      console.log(places);
-      places.features.forEach(place => {
-        // create the popup
-        var popup = new maplibregl.Popup({ offset: 5 }).setText(
-          place.properties.address
-        );
-         
-        // create DOM element for the marker
-        var el = document.createElement('div');
-        el.className = 'address-marker';
-         
-        // create the marker
-        new maplibregl.Marker(el)
-        .setLngLat(place.geometry.coordinates)
-        .setPopup(popup) // sets a popup on this marker
-        .addTo(map);
-      });
-    });
+    // fetch(voters_url).then(response => response.json()).then(places => {
+    //   console.log(places);
+    //   places.features.forEach(place => {
+    //     // create the popup
+    //     var popup = new maplibregl.Popup({ offset: 5 }).setText(
+    //       place.properties.address
+    //     );
+    //      
+    //     // create DOM element for the marker
+    //     var el = document.createElement('div');
+    //     el.className = 'address-marker';
+    //      
+    //     // create the marker
+    //     new maplibregl.Marker(el)
+    //     .setLngLat(place.geometry.coordinates)
+    //     .setPopup(popup) // sets a popup on this marker
+    //     .addTo(map);
+    //   });
+    // });
   </script>
 
 </body>
