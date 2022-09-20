@@ -29,15 +29,15 @@
   <div id="map"></div>
   <script>
     var pass_entered;
-    var password="Mozz";
-    // var voters_url = 'http://localhost:3000/voters/city_geojson/newport.json'; // local
-    var voters_url = 'newport.json'; // prod
+    const password="Mozz";
+    // const voters_url = 'http://localhost:3000/voters/city_geojson/newport.json'; // local
+    const voters_url = 'newport.json'; // prod
 
     while (pass_entered!=password) {
-        pass_entered=prompt('Please enter the password:','');
+      pass_entered=prompt('Please enter the password:','');
     }
 
-    var map = new maplibregl.Map({
+    const map = new maplibregl.Map({
       container: 'map',
       style:
       'https://api.maptiler.com/maps/basic/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
@@ -80,6 +80,7 @@
               9,
               9
             ],
+            'heatmap-weight': 10,
             // Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
             // Begin color ramp at 0-stop with a 0-transparancy color
             // to create a blur-like effect.
@@ -107,8 +108,8 @@
               ['zoom'],
               0,
               2,
-              5,
-              10
+              2,
+              5
             ],
             // Transition from heatmap to circle layer by zoom level
             'heatmap-opacity': [
